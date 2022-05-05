@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs Cloud - IP Output</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/find-output-styles.css') }}">
+</head>
+<body>
+<header>
+    <h1 class="header-title"><a href="/">Logs Cloud</a></h1>
+    <a href="/" class="add-logs">Home</a>
+</header>
+<h1 class="main-header">IP region: {{ keyword }}</h1>
+{% for element in data %}
+    <div class="element">
+        <h6 class="element-header">{{ element[0] }}</h6>
+        <p class="element-data">{{ element[1] }}</p>
+        <p class="element-data">{{ element[2] }}</p>
+        <a href="{{ '/user_hash/'+element[3] }}" class="user-hash">User_hash: {{ element[3] }}</a>
+        <hr>
+    </div>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs Cloud - Find Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<header>
+    <h1 class="header-title"><a href="/">Logs Cloud</a></h1>
+    <a href="/add_logs" class="add-logs">Add logs</a>
+    {#    <a href="/all-logs-map" class="add-logs">All logs map</a>#}
+</header>
+<main>
+    <h2 class="main-header">Filters</h2>
+    <div class="find-block">
+        <form action="/open_user" method="post" style="float: left">
+            <h3 class="find-form-header">Open block by user hash</h3>
+            <label>
+                <input type="text" name="user-hash" placeholder="User hash" class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="submit" value="Send">
+            </label>
+        </form>
+        <p class="description-text">In the second field, specify keywords that should not be in username. Enter
+            filters separated by commas</p>
+    </div>
+    <div style="clear: both;"></div>
+    <hr class="find-hr-block">
+    <div class="find-block">
+        <form action="/find_by_site" method="post" style="float: left">
+            <h3 class="find-form-header">Find by site name</h3>
+            <label>
+                <input type="text" name="site_name" placeholder="Site name" class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="text" name="filters" placeholder="Exception words" class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="submit" value="Send">
+            </label>
+        </form>
+        <p class="description-text">In the second field, specify keywords that should not be in username. Enter
+            filters separated by commas</p>
+    </div>
+    <div style="clear: both;"></div>
+    <hr class="find-hr-block">
+    <div class="find-block">
+        <form action="/find_ip_by_rg" method="post" style="float: left">
+            <h3 class="find-form-header">Find ip by region</h3>
+            <label>
+                <input type="text" name="region" placeholder="Country code. Leave blank to display all"
+                       class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="text" name="filters" placeholder="Filters" class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="submit" value="Send">
+            </label>
+        </form>
+        <p class="description-text">In the second field, specify keywords that should be in username. Enter filters
+            separated by commas. Enter the country code in two letter format (example: US)</p>
+    </div>
+    <div style="clear: both"></div>
+    <hr class="find-hr-block">
+    <div class="find-block">
+        <form action="/find_log_by_rg" method="post" style="float: left">
+            <h3 class="find-form-header">Find log by region</h3>
+            <label>
+                <input type="text" name="region" placeholder="Country code" class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="submit" value="send">
+            </label>
+        </form>
+        <p class="description-text">Enter the country code which logs you want to display in two letter format (example:
+            US)</p>
+    </div>
+    <div style="clear: both"></div>
+    <hr class="find-hr-block">
+    <div class="find-block">
+        <form action="/find_ftp_by_rg" method="post" style="float: left">
+            <h3 class="find-form-header">Find ftp by region</h3>
+            <label>
+                <input type="text" name="region" placeholder="Country code" class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="text" name="filters" placeholder="Filters" class="input-find-text">
+            </label>
+            <div style="clear: both"></div>
+            <label>
+                <input type="submit" value="Send">
+            </label>
+        </form>
+        <p class="description-text">In the second field, specify keywords that should be in username. Enter filters
+            separated by commas. Enter the country code in two letter format (example: US)</p>
+    </div>
+    <hr class="find-hr-block">
+    <div class="find-block">
+        <form action="/find_card_by_rg" method="post" style="float: left">
+            <h3 class="find-form-header">Find credit by region</h3>
+            <label>
+                <input type="text" name="region" placeholder="Country code" class="input-find-text">
+            </label>
+            <div style="clear:both;"></div>
+            <label>
+                <input type="submit" value="Send">
+            </label>
+        </form>
+        <p class="description-text">Enter filters
+            separated by commas. Enter the country code in two letter format (example: US)</p>
+    </div>
+</main>
+<footer>
+    <a href=""><h3 class="footer-item">Help</h3></a>
+    <a href=""><h3 class="footer-item">Support author</h3></a>
+    <a href=""><h3 class="footer-item">Our Telegram chanel</h3></a>
+</footer>
+</body>
+</html>

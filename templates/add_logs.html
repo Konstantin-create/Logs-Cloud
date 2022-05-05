@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs Cloud - Add logs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add-style.css') }}">
+</head>
+<body>
+<header>
+    <h1 class="header-title"><a href="/">Logs Cloud</a></h1>
+    <a href="/" class="add-logs">Home</a>
+</header>
+<div class="input-block">
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <label for="inputTag" title="Click to select folder">
+            Click to select a zip folder or drag and drop it<br>
+            <input type="file" name="file-input" class="upload-file" aria-label="Upload"
+                   multiple accept=".zip" id="inputTag">
+            <br/>
+            <span id="imageName"></span>
+            <input type="submit" value="Upload">
+        </label>
+    </form>
+</div>
+<p class="description">Upload zip folders in the format: folder.zip/folder/logs</p>
+<p class="example-download"><a href="/download_example" style="color:#000;" title="Download example">Example</a></p>
+<footer>
+    <a href=""><h3 class="footer-item">Help</h3></a>
+    <a href=""><h3 class="footer-item">Support author</h3></a>
+    <a href=""><h3 class="footer-item">Our Telegram chanel</h3></a>
+</footer>
+<script>
+    let input = document.getElementById("inputTag");
+    let imageName = document.getElementById("imageName")
+
+    input.addEventListener("change", () => {
+        let inputImage = document.querySelector("input[type=file]").files[0];
+
+        imageName.innerText = inputImage.name;
+    })
+</script>
+</body>
+</html>

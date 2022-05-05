@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs Cloud - Card Output</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/card-output.css') }}">
+</head>
+<body>
+<header>
+    <h1 class="header-title"><a href="/">Logs Cloud</a></h1>
+    <a href="/" class="add-logs">Home</a>
+</header>
+<h1 class="main-header">Cards region: {{ region }}</h1>
+{% for key in data %}
+    <div>
+        <h1 class="log-name">Log: {{ key }}</h1>
+        {% for element in data[key][0] %}
+            <div class="card-data">
+                <h4>Holder: {{ element[0] }}</h4>
+                <h4>Card type: {{ element[1] }}</h4>
+                <h4>Card number: {{ element[2] }}</h4>
+                <h4>Validity: {{ element[3] }}</h4>
+                <h2 style="float: left">Possible cvv's:</h2>
+                {% for cvv in data[key][1] %}
+                    <h4 style="float: left; padding-left: 10px; line-height: 2em">{{ cvv }}</h4>
+                {% endfor %}
+                <div style="clear: both"></div>
+            </div>
+        {% endfor %}
+        <div style="clear: both"></div>
+        <a href="{{ '/user_hash/'+key }}" class="redirect-link">User_hash: {{ key }}</a>
+        <hr>
+    </div>
+{% endfor %}
+</body>
+</html>

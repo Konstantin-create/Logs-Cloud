@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+header {
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-title {
+    float: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    color: white;
+    line-height: 8vh;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.add-logs {
+    float: right;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 8vh;
+    color: white;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.add-logs:hover {
+    text-decoration: underline;
+}
+
+.main-header {
+    font-family: Quicksand, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 40px;
+}
+
+.location {
+    float: left;
+    margin-left: 20px;
+}
+
+.location-header {
+    font-family: Quicksand, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.location-data, .location-map {
+    font-family: Quicksand, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    margin: 10px 30px;
+    color: black;
+}
+
+.location-map {
+    text-decoration: underline;
+}
+
+.screenshot {
+    width: 700px;
+    margin-left: 50px;
+}
+
+.user-info, .passwords, .user-info, .ftp, .installed-software, .auto-fills .credit {
+    width: 45%;
+    padding-top: 50px;
+}
+
+.user-info-header, .passwords-header, .ftp-header, .installed-software-header, .auto-fills-header, .credit-header {
+    font-family: Quicksand, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin: 10px;
+    padding-top: 50px;
+}
+
+.user-info-data, .passwords-data, .ftp-data, .installed-software-data, .auto-fills-data, .credit-data {
+    padding-left: 50px;
+    /*font-family: Quicksand, sans-serif;*/
+    /*font-size: 15px;*/
+}

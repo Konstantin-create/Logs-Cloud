@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs Cloud - Output</title>
+</head>
+<body>
+<h1>Region: {{ region }}</h1>
+{% for key in data %}
+    <div>
+        <h1>{{ key }}</h1>
+        {% for element in data[key] %}
+            <h2>+--{{ element }}</h2>
+        {% endfor %}
+        <a href="{{ '/user_hash/'+key }}">User_hash: {{ key }}</a>
+        <hr>
+    </div>
+{% endfor %}
+</body>
+</html>

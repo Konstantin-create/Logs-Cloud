@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+header {
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-title {
+    float: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    color: white;
+    line-height: 8vh;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.add-logs {
+    float: right;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 8vh;
+    color: white;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.add-logs:hover {
+    text-decoration: underline;
+}
+
+.main-header {
+    font-family: Quicksand, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.log-name {
+    font-family: Quicksand, sans-serif;
+    font-weight: 100;
+    font-size: 34px;
+    padding: 30px;
+}
+
+.card-data {
+    float: left;
+    padding: 50px;
+    font-family: Quicksand, sans-serif;
+    font-weight: 100;
+}
+
+.redirect-link {
+    font-family: Quicksand, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: black;
+    text-decoration: underline;
+    padding-left: 50px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 80%;
+    margin: 10px auto;
+}
